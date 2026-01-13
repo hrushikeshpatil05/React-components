@@ -18,6 +18,23 @@ main {
   justify-content: center;
 }
 
+.controls-wrapper {
+  margin-bottom: 24px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100px;
+}
+
+.bar-label {
+  text-align: bottom;
+  padding: 4px;
+
+}
+
 .chart {
   height: 400px;
   width: 500px;
