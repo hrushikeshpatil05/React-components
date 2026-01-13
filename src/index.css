@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+main {
+  padding: 40px 12px;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.chart {
+  height: 400px;
+  width: 500px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.bar {
+  flex: 1;
+}
