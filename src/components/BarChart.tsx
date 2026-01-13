@@ -2,9 +2,11 @@ import { useMemo } from "react";
 
 const getMaxHeight = (height: number, maxHeight: number) => `${(height / maxHeight) * 100}%`
 
-function Bar(props: any) {
+function Bar({ label, height, colour }: any) {
     return (
-        <div className="bar" {...props} >
+        <div className="bar-wrapper">
+            <div className="bar" style={{ backgroundColor: colour, height: height }} title={label} />
+            <div className="bar-label">{label}</div>
         </div>
     )
 };
@@ -21,7 +23,7 @@ function BarChart({ items, transformer }: any) {
     return (
         <>
             <div className="chart">{transformedItems.map((item: any) => (
-                <Bar key={item.id} style={{ backgroundColor: item.colour, height: getMaxHeight(item.value, maxHeight) }} title={item.label} />
+                <Bar key={item.id} colour={item.colour} height={getMaxHeight(item.value, maxHeight)} label={item.label} />
             ))}</div>
         </>
     )

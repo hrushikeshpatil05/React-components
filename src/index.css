@@ -30,9 +30,15 @@ main {
 }
 
 .bar-label {
-  text-align: bottom;
+  text-align: center;
   padding: 4px;
-
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .chart {
@@ -41,10 +47,19 @@ main {
   background: transparent;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: stretch;
   gap: 12px;
+  margin-bottom: 30px;
+}
+
+.bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  position: relative;
 }
 
 .bar {
-  flex: 1;
+  width: 100%;
 }
