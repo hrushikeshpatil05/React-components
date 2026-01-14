@@ -63,3 +63,8 @@ main {
 .bar {
   width: 100%;
 }
+
+.popover-wrapper {
+  position: relative;
+  padding: 20px;
+}

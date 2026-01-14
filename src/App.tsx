@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import { getData } from './Server/Api';
-import BarChart from './components/BarChart';
-import Control from './components/Control';
+import BarChart from './components/Barchart/BarChart';
+import Control from './components/Barchart/Control';
+import Popover from './components/popover/Popover';
 
 const transformData = (item: any) => ({
   id: item.id,
@@ -55,6 +56,9 @@ function App() {
           {status === 'loading' && <p>...loading</p>}
           {status === 'error' && <p>...Something went wrong</p>}
           {status === 'success' && <BarChart items={sortedChartItems} transformer={transformData} />}
+        </div>
+        <div className="popover-wrapper">
+          <Popover />
         </div>
       </main>
     </>
