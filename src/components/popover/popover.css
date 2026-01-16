@@ -1,3 +1,5 @@
+
+
 .popover-content-wrapper {
     display: none;
     background-color: rgba(0, 0, 0, 0.2);
@@ -26,6 +28,7 @@ button {
     height: 200px;
     padding: 30px 40px;
     border-radius: 5px;
+    text-align: center;
 }
 
 .popover-content p {

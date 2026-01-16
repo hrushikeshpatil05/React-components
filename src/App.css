@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -37,6 +36,20 @@
   padding: 2em;
 }
 
+.popover-wrapper {
+  margin:50px;
+}
+
 .read-the-docs {
   color: #888;
+}
+
+li {
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+ol li::marker {
+  font-size:1.3rem;
+  font-weight: bold;
 }
