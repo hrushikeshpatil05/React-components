@@ -244,6 +244,173 @@ function curry(fn) {
 const sum = (a, b, c) => a + b + c;
 const curriedSum = curry(sum);
 
-console.log(curriedSum(1)(2)(3)); // 6
+// console.log(curriedSum(1)(2)(3)); // 6
 // console.log(curriedSum(1, 2)(3)); // 6
+
+
+let count = 0;
+
+let incrementCounter = () => {
+  count++
+  // console.log(`Count: ${count}`);
+}
+
+// let intervalId = setInterval(incrementCounter,1000);
+
+
+const mySetInterval = ((fn,delay) => {
+  let timerId;
+  // console.log(delay);
+
+  const wrapper = () => {
+    fn();
+    timerId = setTimeout(wrapper,delay);
+  }
+
+  timerId = setTimeout(wrapper,delay);
+
+  return () => {
+    clearTimeout(timerId);
+  }
+});
+
+// const stop = mySetInterval(() => {
+//   incrementCounter()
+// }, 1000);
+
+// setTimeout(() => {
+//   stop();
+// }, 5000);
+
+
+Array.isMyArray = (args) => {
+  console.log(args);
+  return Object.prototype.toString.call(args) === '[object Array]';
+}
+
+let myArr = [5,10,25];
+let myObj = {'a': 1,'b': 2,'c': 3};
+
+// console.log(Array.isMyArray(myArr));
+
+function memoize(fn) {
+  const cache = new Map();
+
+  return function (...args) {
+    const key = JSON.stringify(args);
+
+    if(cache.has(key)) {
+      return cache.get(key);
+    }
+    
+    const result = fn.apply(this,args);
+    cache.set(key,result);
+    return result;
+  }
+}
+
+function fibonacci(n) { // Exponential time complexity O(2^n)
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+
+// The memoize function wraps the original, expensive function
+const memoizedFibonacci = memoize(fibonacci); 
+
+// The first call computes and caches all intermediate results
+// console.log(memoizedFibonacci(42)); // Takes time
+
+// console.log(memoizedFibonacci(42)); // Instant retrieval from cache
+
+let ct = 0;
+
+// const pr1 = new Promise((resolve,reject) => {
+//   console.log('inside promise pr1',ct);
+//   setTimeout(() => {
+//     resolve("Resolved the promise");
+//   },5000);
+// });
+
+// const pr2 = new Promise((resolve,reject) => {
+//   console.log('inside promise pr2',ct);
+//   setTimeout(() => {
+//     resolve("Resolved the promise");
+//   },10000);
+// });
+
+// async function promiseHandler() {
+//   console.log('inside handler');
+//   setInterval(() => {ct++;
+//     console.log(ct);
+//   },1000);
+//   const obj1 = await pr1;
+//   // console.log('obj1',obj1);
+//   const obj2 = await pr2;
+//   console.log('obj2',obj2);
+// }
+
+// promiseHandler();
+
+// var a = 10;
+// function temp() {
+//   a_1 = 20;
+//   console.log(a_1);
+//   var a_1 = 30;
+//   a_2 = 40;
+//   console.log(a);
+// }
+
+// temp();
+// console.log(a_2);
+// console.log(a_1);
+// var a = 30;
+
+// let badArray = [];
+
+// function createCloserArray(n) {
+//   return function() {
+//     return "n = " + n;
+//   }
+// }
+
+// for(let i=0;i<10;i++) {
+//   badArray[i] = createCloserArray(i);
+// }
+
+// for(var i in badArray) {
+//   console.log(badArray[i]());
+// }
+
+
+var fullName = "Hrushikesh Patil";
+
+var obj = {
+  fullName : "Unmesh Kadam",
+  prop: {
+    fullName : "Akshad Naikwadi",
+    getFullName: function() {
+      return this.fullName;
+    }
+  },
+  getFirstName: function() {
+    return this.fullName.split(' ')[0];
+  },
+  getLastName: (function() {
+    return this.fullName.split(' ')[1];
+  }),
+}
+// console.log(obj.fullName);
+// console.log(obj.prop.getFullName());
+// console.log(obj.getFirstName());
+// console.log(obj.getLastName.bind(obj)());
+
+console.log(Math.max(...myArr));
+
+
+
+
+
+
+
  
