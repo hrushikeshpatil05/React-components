@@ -4,6 +4,7 @@ import Popover from './components/popover/Popover';
 import Accordion from './components/Accordion/Accordion';
 import BarChartMain from './components/Barchart/BarChartMain';
 import Carousel from './components/Carousel/Carousel';
+import ToDoList from './components/To-do List/ToDoList';
 
 
 
@@ -31,6 +32,10 @@ function App() {
         <li>
           <h2>Carousel</h2>
           <Carousel/>
+        </li>
+        <li>
+          <h2>To-do List</h2>
+          <ToDoList />
         </li>
         </ol>
       </main>

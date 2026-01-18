@@ -1,0 +1,90 @@
+
+.to-do-list-wrapper {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.to-do-list-contianer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.to-do-list-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #0e0e0e;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.to-do-list-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.to-do-list-add-btn {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.to-do-list-add-btn:hover {
+  background-color: #357abd;
+}
+
+.to-do-list-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.to-do-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #4a90e2;
+  transition: transform 0.2s ease;
+}
+
+.to-do-list-item:hover {
+  transform: translateX(5px);
+}
+
+.to-do-list-item li {
+  list-style: none;
+  color: #333;
+  font-size: 16px;
+  word-break: break-all;
+  margin-right: 10px;
+}
+
+.to-do-list-item button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.to-do-list-item button:hover {
+  opacity: 0.8;
+}
