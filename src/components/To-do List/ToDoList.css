@@ -1,27 +1,26 @@
-
 .to-do-list-wrapper {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.to-do-list-contianer {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+.to-do-list-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .to-do-list-input {
-    flex: 1;
-    padding: 12px 15px;
-    border: 2px solid #0e0e0e;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #0e0e0e;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
 }
 
 .to-do-list-input:focus {
@@ -66,8 +65,7 @@
   transform: translateX(5px);
 }
 
-.to-do-list-item li {
-  list-style: none;
+.to-do-list-item span {
   color: #333;
   font-size: 16px;
   word-break: break-all;
@@ -95,16 +93,23 @@
 }
 
 .to-do-list-edit-container {
-    display: flex;
-    width: 100%;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
 }
 
 .inline-edit-input {
-    flex: 1;
-    padding: 8px;
-    border: 2px solid #4a90e2;
-    border-radius: 6px;
-    font-size: 16px;
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #4a90e2;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
 }

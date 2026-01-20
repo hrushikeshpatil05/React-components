@@ -1,14 +1,12 @@
-
-import './App.css'
-import Popover from './components/popover/Popover';
-import Accordion from './components/Accordion/Accordion';
-import BarChartMain from './components/Barchart/BarChartMain';
-import Carousel from './components/Carousel/Carousel';
-import ToDoList from './components/To-do List/ToDoList';
-import { BuggyTodo } from './Debugging/BuggyTodo';
+import "./App.css";
+import Popover from "./components/popover/Popover";
+import Accordion from "./components/Accordion/Accordion";
+import BarChartMain from "./components/Barchart/BarChartMain";
+import Carousel from "./components/Carousel/Carousel";
+import ToDoList from "./components/To-do List/ToDoList";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-
   return (
     <>
       <main>
@@ -37,11 +35,14 @@ function App() {
             <h2>To-do List</h2>
             <ToDoList />
           </li>
+          <li>
+            <h2>NavBar</h2>
+            <Navbar />
+          </li>
         </ol>
       </main>
     </>
-  )
+  );
 }
 
 export default App;
-
