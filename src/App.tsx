@@ -5,6 +5,7 @@ import BarChartMain from "./components/Barchart/BarChartMain";
 import Carousel from "./components/Carousel/Carousel";
 import ToDoList from "./components/To-do List/ToDoList";
 import Navbar from "./components/Navbar/Navbar";
+import ChipsInput from "./components/Chips-Input/ChipsInput";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
             <h2>Buggy Todo (Debug Me!)</h2>
             <BuggyTodo />
           </li> */}
+          <li>
+            <h2>NavBar</h2>
+            <Navbar />
+          </li>
           <li>
             <h2>Bar Chart</h2>
             <BarChartMain />
@@ -36,8 +41,8 @@ function App() {
             <ToDoList />
           </li>
           <li>
-            <h2>NavBar</h2>
-            <Navbar />
+            <h2>Chips Input</h2>
+            <ChipsInput />
           </li>
         </ol>
       </main>
