@@ -8,7 +8,7 @@ export default function TrafficLight() {
         green: {next:"red",duration:2000},
     }
 
-    const [activeColor, setActiveColor] = useState("red");
+    const [activeColor, setActiveColor] = useState<string>("red");
 
     useEffect(() => {
         const {next, duration} = colorTemplate[activeColor];

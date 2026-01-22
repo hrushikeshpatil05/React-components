@@ -7,6 +7,7 @@ import ToDoList from "./components/To-do List/ToDoList";
 import Navbar from "./components/Navbar/Navbar";
 import ChipsInput from "./components/Chips-Input/ChipsInput";
 import TrafficLight from "./components/Traffic-light/TrafficLight";
+import BillingCounter from "./components/Billing-counter/BillingCounter";
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
           </li>
           <li>
             <TrafficLight />
+          </li>
+          <li>
+            <BillingCounter />
           </li>
         </ol>
       </main>
