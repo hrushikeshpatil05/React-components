@@ -6,6 +6,7 @@ import Carousel from "./components/Carousel/Carousel";
 import ToDoList from "./components/To-do List/ToDoList";
 import Navbar from "./components/Navbar/Navbar";
 import ChipsInput from "./components/Chips-Input/ChipsInput";
+import TrafficLight from "./components/Traffic-light/TrafficLight";
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
           <li>
             <h2>Chips Input</h2>
             <ChipsInput />
+          </li>
+          <li>
+            <TrafficLight />
           </li>
         </ol>
       </main>
